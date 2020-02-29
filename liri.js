@@ -76,7 +76,6 @@ var getMeSpotify = function (songName) {
 // Function for concert search
 var getMyBands = function (searchTerm) {
 
-
   //FIXME: 
   var queryURL = "https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp";
 

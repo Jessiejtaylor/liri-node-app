@@ -12,17 +12,29 @@ Use node to run this program. Use node liri.js then run one of the following com
 - <command, artist name><br>
 - Uses the bandsintown API to take a band name from the user and returns that bands next concert
 
+![Image description](./concert-this.png)
+![Image description](./concert-this-terminal.png)
+
 <b>spotify-this-song</b><br>
 - <command, song name><br>
 - Uses the spotify API to take a song name from the user and returns the artist, song name, spotify-link and album
+
+![Image description](./spotify-this.png)
+![Image description](./spotify-this-terminal.png)
 
 <b>movie-this</b><br>
 - <command, movie name><br>
 - Uses the OMDB API to take a movie name and returns the name, cast, release year, IMDB and Rotten Tomatoes rating, country of origin, language and plot)
 
+![Image description](./movie-this.png)
+![Image description](./movie-this-terminal.png)
+
 <b>do-what-it-says</b><br>
 - < command >
 - Uses the built in readFile() method to access data from a prepopulated .txt file and return its information as a command/search query.)
+
+![Image description](./do-what-it-says.png)
+![Image description](./do-what-it-says-terminal.png)
 
 <b>When running a command follow it by desired text/search:</b><br>
 Example: node liri.js movie-this Miss Congeniality
