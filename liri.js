@@ -32,19 +32,6 @@ var searchTerm = process.argv.slice(3).join(" ")
 // Writes to the log.txt file
 var writeToLog = function (data) {
 
-  /** FIXME: BONUS (DONT DO THIS YET)
-   * 
-   * 
-
-      In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
-
-      Make sure you append each command you run to the log.txt file.
-
-      Do not overwrite your file each time you run a command.
-    */
-
-  // Append the JSON data and add a newline character to the end of the log.txt file
-
 };
 
 // Helper function that gets the artist name
@@ -58,36 +45,6 @@ var getMeSpotify = function (songName) {
     songName = "What's my age again";
   }
 
-
-
-  //   /** TODO: Write the code to exceute the command below. 
-  //    * 
-  //    *      node liri.js spotify-this-song '<song name here>'
-  //    * 
-
-  // if (command === "spotify-this-song") {
-  //     getMeSpotify()
-  // }
-
-
-
-  //     * This will show the following information about the song in your terminal/bash window
-
-  //         1. Artist(s)
-
-  //         2. The song's name
-
-  //         3. A preview link of the song from Spotify
-
-  //         4. The album that the song is from
-
-  //     * If no song is provided then your program will default to "The Sign" by Ace of Base.
-
-  //     * You will utilize the node-spotify-api package in order to retrieve song information from the Spotify API.
-
-  //     * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a client id and client secret:
-
-  //   */
   spotify.search({
     type: "track",
     query: songName
@@ -120,8 +77,6 @@ var getMeSpotify = function (songName) {
 var getMyBands = function (searchTerm) {
 
 
-
-
   //FIXME: 
   var queryURL = "https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp";
 
@@ -140,29 +95,10 @@ var getMyBands = function (searchTerm) {
         console.log("Date:", moment(jsonData[i].datetime, "YYYY-MM-DD").format("MM/DD/YYYY"))
         console.log("----------------------------------------\n")
       }
-      // Name of the venue
-
-      // Venue location
-
-      // Date of the Event (use moment to format this as "MM/DD/YYYY")
-
-
-      // if (!jsonData.length) {
-      //   console.log("No results found for " + artist);
-      //   return;
-      // }
-
-      // var logData = [];
-
-      // logData.push("Upcoming concerts for " + artist + ":");
-
-      //FIXME: Finish the code below
 
     }
   );
 };
-
-
 
 // Function for running a Movie Search
 var getMeMovie = function (movieName) {
@@ -186,16 +122,7 @@ var getMeMovie = function (movieName) {
 function getMyMovie(searchTerm) {
   console.log("http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=trilogy")
   axios.get("http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=trilogy").then(function (response) {
-    // * Title of the movie.
-    // * Year the movie came out.
-    // * IMDB Rating of the movie.
-    // * Rotten Tomatoes Rating of the movie.
-    // * Country where the movie was produced.
-    // * Language of the movie.
-    // * Plot of the movie.
-    // * Actors in the movie.  
-
-    //  
+  
 
     console.log("Title:", response.data.Title)
     console.log("Year:", response.data.Year)
@@ -225,16 +152,7 @@ function getDoWhatItSays() {
 
 // Function for determining which command is executed
 var pick = function (command, searchTerm) {
-  //TODO:  Write your code below
-  //   repeat the switch command for each section
-  // console.log("cd: " + commandData)
-  //         concert-this
-
-  // spotify-this-song
-
-  // movie-this
-
-  // do-what-it-says
+  
   switch (command) { // if command === ...
     case "spotify-this-song": // "spotify-this-song" then
       getMeSpotify(searchTerm) // call the funct
@@ -250,9 +168,7 @@ var pick = function (command, searchTerm) {
     default:
       break;
   }
-  // This will be the main function to control which method to call. See function "runThis" is calling this pick method
-
-
+ 
 };
 
 // Function which takes in command line arguments and executes correct function accordingly
