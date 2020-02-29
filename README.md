@@ -1,6 +1,8 @@
 # liri-node-app
 
-https://github.com/Jessiejtaylor/liri-node-app
+Jessie Taylor: Developer
+
+Link to github repository: https://github.com/Jessiejtaylor/liri-node-app
 
 Search Spotify for songs, Bands in town for concerts and OMBD for movies. Have Fun.
 
